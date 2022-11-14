@@ -1,0 +1,17 @@
+Cheat Codes for CC3K+ Project:
+
+EASYMODE – easy mode: (more gold, NPC 1/2 HP)
+MEDIUMMODE - medium mode: (normal mode)
+HARDMODE - hard mode: (less gold, NPC 1.5X Atk) (to be implemented)
+
+SHOWPC - show the map with only pc generated
+SHOWPOTION - show the map with pc, stair, potions (including their location and type) generated
+SHOWTREASURE - show the map with pc, stair, potions and treasures (including their location and type) generated
+
+MOREMONEY - set coin num as 999 (default to be fixed, player can enter -MOREMONEY command and so that the coin number is no longer fixed.)
+MOREHP - set PC HP as 999 (default to be fixed, player can enter -MOREHP command and so that the PC's HP is no longer fixed.)
+SHOWSTAIR - make the stair visible (even without the compass) (the player can enter -SHOWSTAIR command to make the stair invisible again.)
+BIGSALE - each potion only costs 1 coin now.
+INFLATION - each potion now costs 8 coins.
+
+
