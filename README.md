@@ -69,12 +69,9 @@ Potions are of two types: positive and negative. Potions can provide the player 
 
 #### Negative Potions:
 
-• Poison health (PH): lose up to 10 HP (cannot fall below 0 HP)
-• Wound Atk (WA): decrease Atk by 5
-• Wound Def (WD): decrease Def by 5
+* Poison health (PH): lose up to 10 HP (cannot fall below 0 HP)
+* Wound Atk (WA): decrease Atk by 5
+* Wound Def (WD): decrease Def by 5
 
-The effects of RH and PH are permanent while the effects of all other potions are limited to the floor they are used on. For
-example, using a BA potion will only boost the player character’s Atk until the beginning of the next floor.
-Note that the PC’s Atk and Def can never drop below 0.
-Question. What design pattern could you use to model the effects of temporary potions (Wound/Boost Atk/Def) so that you
-do not need to explicitly track which potions the player character has consumed on any particular floor?
+The effects of RH and PH are permanent while the effects of all other potions are limited to the floor they are used on. For example, using a BA potion will only boost the player character’s Atk until the beginning of the next floor. Note that the PC’s Atk and Def can never drop below 0.
+
