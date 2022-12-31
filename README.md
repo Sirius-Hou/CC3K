@@ -63,9 +63,9 @@ Potions are of two types: positive and negative. Potions can provide the player 
 
 #### Positive Potions:
 
-• Restore health (RH): restore up to 10 HP (cannot exceed maximum prescribed by race)
-• Boost Atk (BA): increase ATK by 5
-• Boost Def (BD): increase Def by 5
+* Restore health (RH): restore up to 10 HP (cannot exceed maximum prescribed by race)
+* Boost Atk (BA): increase ATK by 5
+* Boost Def (BD): increase Def by 5
 
 #### Negative Potions:
 
