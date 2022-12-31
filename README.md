@@ -45,17 +45,36 @@ Enemies are the mortal foes of the player character. In a traditional rogue-like
 6. **dragon** (150 HP, 20 Atk, 20 Def, always guards a treasure horde),
 7. **phoenix** (50 HP, 35 Atk, 20 Def).
 
-Merchants can be attacked and slain by the player character. Attacking or slaying a Merchant will cause every Merchant
-from that point forward to become hostile to the player character (and will attack them if they pass within a one block radius).
-Dragons always spawn in a one block radius of its dragon horde pile of treasure (see Treasure). That is, if a dragon horde
-is spawned then a dragon is spawned.
-Upon their demise, any enemy that is not a dragon or a merchant will drop 1 gold. This gold is immediately added to the
-player character’s total.
-Enemies (except dragons, who are stationary) move randomly 1 floor tile at a time, assuming the floor tile is unoccupied
-(see Section for floor tile description). An enemy can never leave the room it was spawned (created) in. Note that enemies
-should be moved in a line by line fashion. That is, starting at the leftmost enemy move all enemies on that row and then move
-to the next row starting with the leftmost. Any particular enemy should only be moved once per player action (e.g. moving
-to a line that has not been processed does not grant an extra move). However, should the player character be within a 1 block
-radius of an enemy then the enemy will always attack the player character.
+Merchants can be attacked and slain by the player character. Attacking or slaying a Merchant will cause every Merchant from that point forward to become hostile to the player character (and will attack them if they pass within a one block radius).
+
+Dragons always spawn in a one block radius of its dragon horde pile of treasure (see Treasure). That is, if a dragon horde is spawned then a dragon is spawned. Upon their demise, any enemy that is not a dragon or a merchant will drop 1 gold. This gold is immediately added to the player character’s total.
+
+Enemies (except dragons, who are stationary) move randomly 1 floor tile at a time, assuming the floor tile is unoccupied (see Section for floor tile description). An enemy can never leave the room it was spawned (created) in. Note that enemies should be moved in a line by line fashion. That is, starting at the leftmost enemy move all enemies on that row and then move to the next row starting with the leftmost. Any particular enemy should only be moved once per player action (e.g. moving to a line that has not been processed does not grant an extra move). However, should the player character be within a 1 block radius of an enemy then the enemy will always attack the player character.
+
 Enemies are denoted on the map as follows: V(ampire), W(erewolf), N(goblin), M(erchant), D(ragon), X(Phoenix),
 T(roll), M(erchant).
+
+
+### Items
+
+#### Potions
+
+Potions are of two types: positive and negative. Potions can provide the player character with positive and negative bonuses as outlined below. Regardless of the potion itself, all potions are denoted on the map with a **P**. A player may not hold any potions. Accordingly, a potion cannot be used unless a player is standing within a 1 block radius of it. The effects of a particular potion are not known until it is used for the first time, e.g. the player character will not know what a potion does until they use it for the first time in a session. However, they will only learn about the effects of that particular potion. Other potions will not have their effects revealed. The exception is for purchasing potions from the Merchant2, which have their abilities displayed.
+
+#### Positive Potions:
+
+• Restore health (RH): restore up to 10 HP (cannot exceed maximum prescribed by race)
+• Boost Atk (BA): increase ATK by 5
+• Boost Def (BD): increase Def by 5
+
+#### Negative Potions:
+
+• Poison health (PH): lose up to 10 HP (cannot fall below 0 HP)
+• Wound Atk (WA): decrease Atk by 5
+• Wound Def (WD): decrease Def by 5
+
+The effects of RH and PH are permanent while the effects of all other potions are limited to the floor they are used on. For
+example, using a BA potion will only boost the player character’s Atk until the beginning of the next floor.
+Note that the PC’s Atk and Def can never drop below 0.
+Question. What design pattern could you use to model the effects of temporary potions (Wound/Boost Atk/Def) so that you
+do not need to explicitly track which potions the player character has consumed on any particular floor?
