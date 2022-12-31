@@ -35,12 +35,8 @@ The major components of the system are as follows:
 By default, the player character is a **human** (who starts with 140 HP, 20 Atk, 20 Def). However, the player has the option of changing their race to something more fantastical (e.g. offer different attributes). The options include **dwarf** (100 HP, 20 Atk, 30 Def, gold is doubled in value), **elves** (140 HP, 30 Atk, 10 Def, negative potions have positive effect), and **orc** (180 HP, 30 Atk, 25 Def, gold is worth half value). In our game board, the player character is always denoted by the ’**@**’ symbol.
 
 #### Enemies
-Enemies are the mortal foes of the player character. In a traditional rogue-like, the enemy character would have some degree
-of artificial intelligence. However, for simplicity in CC3k+enemies move one square randomly within the confines of the
-chamber they were spawned in. Except dragons, who always guard a treasure horde.
-Enemies can be one of vampire(50 HP, 25 Atk, 25 Def), werewolf(120 HP, 30 Atk, 5 Def), troll(120 HP, 25 Atk, 15 Def),
-goblin (70 HP, 5 Atk, 10 Def), merchant (30 HP, 70 Atk, 5 Def), dragon (150 HP, 20 Atk, 20 Def, always guards a treasure
-horde), phoenix (50 HP, 35 Atk, 20 Def).
+
+Enemies are the mortal foes of the player character. In a traditional rogue-like, the enemy character would have some degree of artificial intelligence. However, for simplicity in CC3k+ enemies move one square randomly within the confines of the chamber they were spawned in. Except dragons, who always guard a treasure horde. Enemies can be one of **vampire**(50 HP, 25 Atk, 25 Def), **werewolf**(120 HP, 30 Atk, 5 Def), **troll**(120 HP, 25 Atk, 15 Def), **goblin**(70 HP, 5 Atk, 10 Def), **merchant**(30 HP, 70 Atk, 5 Def), **dragon**(150 HP, 20 Atk, 20 Def, always guards a treasure horde), **phoenix**(50 HP, 35 Atk, 20 Def).
 Merchants can be attacked and slain by the player character. Attacking or slaying a Merchant will cause every Merchant
 from that point forward to become hostile to the player character (and will attack them if they pass within a one block radius).
 Dragons always spawn in a one block radius of its dragon horde pile of treasure (see Treasure). That is, if a dragon horde
