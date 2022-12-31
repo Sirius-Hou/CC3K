@@ -36,7 +36,15 @@ By default, the player character is a **human** (who starts with 140 HP, 20 Atk,
 
 #### Enemies
 
-Enemies are the mortal foes of the player character. In a traditional rogue-like, the enemy character would have some degree of artificial intelligence. However, for simplicity in CC3k+ enemies move one square randomly within the confines of the chamber they were spawned in. Except dragons, who always guard a treasure horde. Enemies can be one of **vampire**(50 HP, 25 Atk, 25 Def), **werewolf**(120 HP, 30 Atk, 5 Def), **troll**(120 HP, 25 Atk, 15 Def), **goblin**(70 HP, 5 Atk, 10 Def), **merchant**(30 HP, 70 Atk, 5 Def), **dragon**(150 HP, 20 Atk, 20 Def, always guards a treasure horde), **phoenix**(50 HP, 35 Atk, 20 Def).
+Enemies are the mortal foes of the player character. In a traditional rogue-like, the enemy character would have some degree of artificial intelligence. However, for simplicity in CC3k+ enemies move one square randomly within the confines of the chamber they were spawned in. Except dragons, who always guard a treasure horde. Enemies can be one of:
+1. **vampire** (50 HP, 25 Atk, 25 Def),
+2. **werewolf** (120 HP, 30 Atk, 5 Def),
+3. **troll** (120 HP, 25 Atk, 15 Def),
+4. **goblin** (70 HP, 5 Atk, 10 Def),
+5. **merchant** (30 HP, 70 Atk, 5 Def),
+6. **dragon** (150 HP, 20 Atk, 20 Def, always guards a treasure horde),
+7. **phoenix** (50 HP, 35 Atk, 20 Def).
+
 Merchants can be attacked and slain by the player character. Attacking or slaying a Merchant will cause every Merchant
 from that point forward to become hostile to the player character (and will attack them if they pass within a one block radius).
 Dragons always spawn in a one block radius of its dragon horde pile of treasure (see Treasure). That is, if a dragon horde
