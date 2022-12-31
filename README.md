@@ -1,8 +1,5 @@
 # The Game of ChamberCrawler3000+ (CC3K)
-This is a customized CC3K game designed in C++. This project implements a game that mimics the video game ChamberCrawler3000+ (CC3k+),
-which is a simplified rogue-like (a genre of video game based upon the game Rogue1 - http://en.wikipedia.org/wiki/Rogue_(video_game)).
-ChamberCrawler3000+ is a game where the player character moves through a dungeon and slays enemies and collects treasure until reaching
-the end of the dungeon.
+This is a customized CC3K game designed in C++. This project implements a game that mimics the video game ChamberCrawler3000+ (CC3k+), which is a simplified rogue-like (a genre of video game based upon the game Rogue1 - http://en.wikipedia.org/wiki/Rogue_(video_game)). ChamberCrawler3000+ is a game where the player character moves through a dungeon and slays enemies and collects treasure until reaching the end of the dungeon.
 
 ### Some Definitions
 It is understandable that this type of game may be new to readers of this document. Accordingly, some definitions are provided
