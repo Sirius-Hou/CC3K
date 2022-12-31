@@ -22,4 +22,7 @@ another character.
 *Definition 9*: Something is **spawned** means that the particular something (an enemy, gold, etc) should be generated and
 placed on the board.
 *Definition 10*: A **1 block radius** denotes the 8 adjacent cells to the character or item.
-![image](https://user-images.githubusercontent.com/118148925/210157611-ac54fa8a-98a8-4a88-8f7d-58a9792cb3d4.png)
+![image](https://user-images.githubusercontent.com/118148925/210157617-28403458-3597-4dac-9dc4-8502803be60e.png)
+
+
+
