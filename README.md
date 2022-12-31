@@ -6,7 +6,7 @@ ChamberCrawler3000+ is a game where the player character moves through a dungeon
 It is understandable that this type of game may be new to readers of this document. Accordingly, some definitions are provided
 here to aid in the reading of this document.
 *Definition 1*: A **character** is a person/animal/thing in the game of CC3k+. This can be either the player character (PC), who
-is controlled by by the player of the game, or non-playable characters, who are strictly enemies in CC3k+.\\
+is controlled by by the player of the game, or non-playable characters, who are strictly enemies in CC3k+.<\br>
 *Definition 2*: An **item** is something the player character can pick up or use.
 *Definition 3*: A **chamber** is an individual room in the game of CC3k+. Chambers are connected by passages.
 *Definition 4*: A **floor** in CC3k+is a predefined configuration of 5 chambers with connecting passageways. Figure 1 below depicts
