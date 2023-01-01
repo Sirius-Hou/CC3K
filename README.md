@@ -145,12 +145,32 @@ within two units of the PC);
 Initially, the game will demand the player enter one of the specified races or quit. Play will then continue in the obvious way until the player restarts, reaches the end of floor 5, the PC dies, or the player quits. If the player reaches the end of the game or their character is slain, give them the option of playing again. Otherwise, do the appropriate thing (restart or quit). The following commands can be supplied to your command interpreter:
 * no,so,ea,we,ne,nw,se,sw: moves the player character one block in the appropriate cardinal direction
 * u [direction]: uses the potion indicated by the direction (e.g. no, so, ea)
-* a [direction]: attacks the enemy in the specified direction, if the monster is in the immediately specified block (e.g.
-must be one block north of the @)
+* a [direction]: attacks the enemy in the specified direction, if the monster is in the immediately specified block (e.g. must be one block north of the @)
 * h, e, d, o: specifies the race the player wishes to be when starting a game
 * r: restarts the game. All stats, inventory, and gold are reset. A new race should be selected.
 * q: allows the player to admit defeat and exit the game.
+
 Note that the board should be redrawn as appropriate every time a command is entered
+
+
+### Ending the Game and Scoring
+
+A game session ends in one of the following ways:
+* the player character reaches the stairs on floor 5,
+* the player character’s health reaches 0, or
+* the player restarts the game.
+
+A player’s score is only generated in the first of above two cases. Score is determined by the amount of gold they have collected in their current character’s life time. Except for humans who have a 50% increase to their score.
+
+![image](https://user-images.githubusercontent.com/118148925/210158520-b12bb690-555f-4b7e-9a5d-f61c2c572144.png)
+
+![image](https://user-images.githubusercontent.com/118148925/210158525-a628e343-1c1a-4a08-a813-d3f494241386.png)
+
+![image](https://user-images.githubusercontent.com/118148925/210158528-850ba3d7-1a25-4757-a54b-207ef74191ab.png)
+
+![image](https://user-images.githubusercontent.com/118148925/210158529-162a230c-7b47-40e8-9b8d-3d0434b51bf7.png)
+
+![image](https://user-images.githubusercontent.com/118148925/210158534-0b02bd6d-6d69-462e-915b-2e67a3a1f8f1.png)
 
 
 
