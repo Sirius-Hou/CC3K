@@ -127,7 +127,7 @@ Damage is calculated as follows: *Damage(Defender) = ceiling((100/(100 + Def(Def
 If the player character has the Barrier Suit, then their damage calculation is changed such that \begin{align}Damage(P C) = ceiling(Damage(Def ender)/2)\end{align}. That is, the damage the player character takes is exactly half the damage they would have
 taken otherwise (rounded up).
 
-
+\left( \frac {\partial f}{\partial x} \right)
 
 
 
