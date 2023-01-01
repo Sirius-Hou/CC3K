@@ -75,3 +75,57 @@ Potions are of two types: positive and negative. Potions can provide the player 
 
 The effects of RH and PH are permanent while the effects of all other potions are limited to the floor they are used on. For example, using a BA potion will only boost the player character’s Atk until the beginning of the next floor. Note that the PC’s Atk and Def can never drop below 0.
 
+#### Treasure
+
+Treasure in CC3k+consists only of gold. Gold can be in several types of piles: **normal** (value 1), **small horde** (value 2), **merchant hoard** (value 4), and **dragon hoard** (value 6). Thus, a dragon must always protect a dragon hoard whenever it randomly spawns. A dragon horde can only be picked up once the dragon guarding it has been slain. Gold, regardless of type, is denoted by ’**G**’ on the map. A merchant horde is dropped upon the death of a merchant.
+
+
+#### Major Items
+
+In the game of CC3k+there are only two major items - one which appears once per floor, and one that appears only once in the game.
+
+The **Compass** is an item which appears once per floor. Every time a floor is generated (see floors section below) one enemy is chosen to be the holder of the compass. When that enemy is slain the Compass drops at their location denoted by a ’**C**’. When the player picks up the stairs then become visible.
+
+The **Barrier Suit** is an item which appears once per game. When it appears it should be denoted by a ’**B**’, and it follows the same rules as a dragon horde. That is, the Barrier Suit is always spawned being protected by a dragon, and cannot be picked up until that dragon has been slain.
+
+
+### Floors
+
+Levels are generated to consist of the 5 chambers connected in the manner outlined in Figure 1. The player character should spawn randomly in a chamber (every chamber is equally likely) but it should never be the case that the player spawns in the chamber with the stairs going down to the next level. Note that the stairway and player character may be spawned with equal probability on any floor tile in a chamber. That is, a larger chamber should be no more likely to spawn the PC/stairs than a smaller chamber, where any floor tile in the selected chamber is equally likely to spawn the PC/stairs. Stairs are denoted by ’**\\**’, but only become visible on that floor once the player has picked up the compass for that floor. That is, until the compass is picked up the stairs are not denoted on the screen at all. Instead, the stairs looks like a regular tile, however if the player character walks over the stairs tile without the compass they will still take them down to the next level.  Potions are spawned with equal probability on every level (e.g 1/6 chance to spawn a particular potion) and any chamber
+has a 1/5 chance to spawn a potion, such that any square in the room has an equal probability of spawning a potion. 10 potions
+are spawned on every floor.
+We might like to have gold spawn more or less frequently as the game gets more difficult. However, to again simplify
+design the spawn rate of gold is 5/8 chance of normal, 1/8 dragon hoard, 1/4 small horde. Chambers are equally likely (as are
+floor tiles in any particular chamber) to spawn gold. 10 piles of gold are spawned on every floor.
+With the exception of dragons, enemies have the following probability distribution of being spawned:
+• Werewolf: 2/9
+• Vampire: 3/18
+• Goblin: 5/18
+• Troll: 1/9
+• Phoenix: 1/9
+• Merchant: 1/9
+20 enemies are spawned per floor. Every chamber is equally likely to spawn any particular monster (similarly for floor
+tiles).
+We require that generation happens in the following order: player character location, stairway location, potions, gold,
+enemies. This is to allow us to more easily evaluate that your random generation is correctly implemented.
+Note that multiple objects (enemies, gold, and potions) cannot occupy the same cell on the game board. That is, no two
+objects can ever occupy the same space. Except in the case of gold, which is picked up when the player character walks over
+it.
+Additionally, when the PC would move onto the stairway down (e.g. the PC is in the block to the immediate east of the
+stairs and the player enters the command to move 1 block west) the next floor is generated and displayed to the player.
+Additionally, items and enemies should only ever spawn on a floor tile and never in a doorway, passage, or the stairs
+leading down to the next floor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
