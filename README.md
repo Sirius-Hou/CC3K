@@ -107,19 +107,25 @@ With the exception of dragons, enemies have the following probability distributi
 * Phoenix: 1/9
 * Merchant: 1/9
 
-20 enemies are spawned per floor. Every chamber is equally likely to spawn any particular monster (similarly for floor tiles). <br>
-We require that generation happens in the following order: player character location, stairway location, potions, gold,
-enemies. This is to allow us to more easily evaluate that your random generation is correctly implemented.
-Note that multiple objects (enemies, gold, and potions) cannot occupy the same cell on the game board. That is, no two
-objects can ever occupy the same space. Except in the case of gold, which is picked up when the player character walks over
-it.
-Additionally, when the PC would move onto the stairway down (e.g. the PC is in the block to the immediate east of the
-stairs and the player enters the command to move 1 block west) the next floor is generated and displayed to the player.
-Additionally, items and enemies should only ever spawn on a floor tile and never in a doorway, passage, or the stairs
-leading down to the next floor.
+20 enemies are spawned per floor. Every chamber is equally likely to spawn any particular monster (similarly for floor tiles).
+
+Note that multiple objects (enemies, gold, and potions) cannot occupy the same cell on the game board. That is, no two objects can ever occupy the same space. Except in the case of gold, which is picked up when the player character walks over it.
+
+Additionally, when the PC would move onto the stairway down to the next level (e.g. the PC is in the block to the immediate east of the stairs and the player enters the command to move 1 block west) the next floor is generated and displayed to the player.
+
+Additionally, items and enemies should only ever spawn on a floor tile and never in a doorway, passage, or the stairs leading down to the next floor.
 
 
+#### Combat
 
+By default, all enemies except for Merchants and Dragons are (by default) hostile to the player character. If the player character enters within a 1 block radius of any hostile enemy, they will attempt to attack the player character. Dragons are only hostile when the player is next to (read: in the 1 block radius of) its dragon horde and never hostile otherwise. Enemies never pursue the player character. If the player character is not within a 1 block radius of the enemy then it moves. Recall that Merchants can become hostile when one is attacked/slain by the player character.
+
+Combat is resolved as follows: Enemies will auto-attack players given the previously specified criteria, however, there is a 50% chance their attack misses. The player character has the option of attacking in a 1 block radius around them. Recall, that the PC has initiative and always attacks first.
+
+Damage is calculated as follows: *Damage(Defender) = ceiling((100/(100 + Def(Defender))) ∗ Atk(Attacker))*, where Attacker specifies the attacking character (enemy or PC) and defender specifies the character being attacked. Thus, in a single round a character can be both an attacker and a defender.
+
+If the player character has the Barrier Suit, then their damage calculation is changed such that \begin{align}Damage(P C) = ceiling(Damage(Def ender)/2)\end{align}. That is, the damage the player character takes is exactly half the damage they would have
+taken otherwise (rounded up).
 
 
 
