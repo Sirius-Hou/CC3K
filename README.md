@@ -124,12 +124,21 @@ Combat is resolved as follows: Enemies will auto-attack players given the previo
 
 Damage is calculated as follows: *Damage(Defender) = ceiling((100/(100 + Def(Defender))) ∗ Atk(Attacker))*, where Attacker specifies the attacking character (enemy or PC) and defender specifies the character being attacked. Thus, in a single round a character can be both an attacker and a defender.
 
-If the player character has the Barrier Suit, then their damage calculation is changed such that $Damage(P C) = ceiling(\left( \frac {Damage(Def ender)}{2} \right)$. That is, the damage the player character takes is exactly half the damage they would have
-taken otherwise (rounded up).
+If the player character has the Barrier Suit, then their damage calculation is changed such that $Damage(P C) = ceiling(\left( \frac {Damage(Def ender)}{2} \right)$. That is, the damage the player character takes is exactly half the damage they would have taken otherwise (rounded up).
 
+### Display
 
+The display of our version of CC3k+ is relatively simple, Figure 1 depicts an empty board. Walls are denoted by ‘|’ and ‘−’, doorways by ‘+’, and passages by ‘#’. Floor tiles that can be walked upon are denoted by ‘.’. Chambers are denoted by the smaller polygons inside the larger rectangle. The player character can only ever occupy a passage block, doorway block, or a floor tile inside a chamber. The player character can see in all chambers simultaneously, e.g. through walls or doors. Figures 2, 3, 4, 5, depict various board states. Note that Figure 1 represents a completely empty game board and is meant to act as a reference of what the game board would look like before any generation occurs.
 
+We also use ASCII colour output codes to make each system component more visible and can be easily spotted (as shown below). In our termcodes.h file, we defined several different color codes which are used to set the color of texts we print to the standard output stream. We used this to make different game elements stand out in the text display. For example, we used the color yellow to show the player, red to show all the NPCs, cyan to display potions, green to show treasures and the barrier suit, etc. We also printed the following additional information below the grid:
+1. the current state of the player character, which includes
+the HP, attack, defence, and coin;
+2. the area around the PC (the NPCs and potions
+within two units of the PC);
+3. the action of the player for the current round;
+4. the combat details with NPC if there were any along when printing the grid.
 
+![image](https://user-images.githubusercontent.com/118148925/210158459-13636419-5259-47b3-a26a-dabd3c4c3066.png)
 
 
 
