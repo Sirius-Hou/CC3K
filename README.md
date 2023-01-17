@@ -173,6 +173,6 @@ A player’s score is only generated in the first of above two cases. Score is d
 ![image](https://user-images.githubusercontent.com/118148925/210158534-0b02bd6d-6d69-462e-915b-2e67a3a1f8f1.png)
 
 
-
+(*Team Project for CS246 (University of Waterloo)*)
 
 
